@@ -1,8 +1,54 @@
-nav{
-    margin: 0 auto;
+/* Navbar container */
+.navbar {
+    background-color: #4CAF50; /* Green background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
 }
-ul a{
-    color: black;
+
+/* Navbar list */
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link styling */
+.nav-link {
     text-decoration: none;
-    margin-right: 20px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active link styling */
+.active {
+    font-weight: bold;
+    color: rgb(51, 41, 48);
+}
+
+.active-link::after {
+    width: 100%;
 }
