@@ -1,0 +1,40 @@
+.countries{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.styled-title {
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 20px 0;
+    padding: 10px 0;
+    letter-spacing: 2px;
+}
+
+.styled-title::before,
+.styled-title::after {
+    content: '';
+    position: absolute;
+    width: 80px; /* Increased line length */
+    height: 3px;
+    background-color: #4CAF50; /* Green line */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+}
+
+.styled-title::before {
+    left: 0;
+}
+
+.styled-title::after {
+    right: 0;
+}
+
+.styled-title:hover::before,
+.styled-title:hover::after {
+    width: 100px; /* Line expands on hover */
+}
+

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import './Country.css';
 const Country = ({ country }) => {
     const { official } = country.name;
     const {flags} = country;
@@ -9,11 +10,12 @@ const Country = ({ country }) => {
         navigate(`/country/${official}`);
     }
     return (
-        <div>
-            <img src={flags.png} alt="" />
+        <div className='country-card'>
+            <img src={flags.png} alt={official} />
             <h3>{official}</h3>
             <button onClick={handleViewDetails}>View Details</button>
         </div>
+
     );
 };
 
