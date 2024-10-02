@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const Country = ({ country }) => {
     const { official } = country.name;
     const {flags} = country;
-    // console.log(country)
+    console.log(country)
     const navigate = useNavigate();
     const handleViewDetails = () => {
         navigate(`/country/${official}`);
