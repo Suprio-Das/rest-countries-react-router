@@ -1,5 +1,5 @@
 import './CountryDetails.css';
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const CountryDetails = () => {
     // loading the specific country
@@ -11,6 +11,12 @@ const CountryDetails = () => {
     // destructuring the country info's
     const { official } = country.name;
     const { flags, area, capital, continents } = country;
+
+    // returning to the previous page
+    const navigate = useNavigate();
+    const handleGoBack = () => {
+        navigate(-1);
+    }
 
     return (
         <div className='countryDetails'>
@@ -35,6 +41,7 @@ const CountryDetails = () => {
                     </tr>
                 </tbody>
             </table>
+            <button onClick={handleGoBack}>Go Back</button>
         </div>
     );
 };

@@ -1,19 +1,34 @@
-.countryDetails{
-    border: 1px solid black;
-    width: 50%;
+.countryDetails {
+    border: 1px solid #ddd;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    min-height: 200px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    padding: 20px;
+    min-height: 300px;
+    border-radius: 15px;
     margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.countryDetails > img{
-    max-height: 300px;
-    overflow: hidden;
+
+.countryDetails:hover {
+    /* transform: translateY(-5px); */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
+.countryDetails > img {
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
 .country-details-table {
     width: 100%;
     max-width: 600px;
@@ -23,12 +38,15 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .country-details-table td {
-    padding: 12px 20px;
+    padding: 15px;
     border-bottom: 1px solid #ddd;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: left;
 }
 
 .country-details-table tr:last-child td {
@@ -38,15 +56,40 @@
 .country-details-table td p {
     margin: 0;
     font-weight: bold;
-    color: #555;
+    color: #333;
+    font-size: 16px;
 }
 
 .country-details-table td:last-child {
     font-weight: normal;
-    color: #333;
-    text-align: center;
+    color: #555;
 }
 
 .country-details-table tr:nth-child(even) {
     background-color: #f1f1f1;
+}
+
+.country-details-table tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+button:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: translateY(0); /* Reset transform when clicked */
 }
